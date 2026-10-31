@@ -95,169 +95,185 @@
   <!-- ======================================================== -->
   <section id="ru" lang="ru">
     <h2>Политика конфиденциальности</h2>
-    <p class="updated">Последнее обновление: 16 июля 2026 г.</p>
+    <p class="updated">Последнее обновление: 31 октября 2026 г.</p>
 
-    <p>Taqvim UZ («приложение», «мы») — мобильное приложение для Узбекистана, показывающее время джамаата (коллективного намаза) в мечетях. Эта политика объясняет, какие данные мы собираем, зачем, и как ими распоряжаемся. Разработчик приложения — YATT «Tursunov Sirojiddin Turg'un o'g'li» (индивидуальный предприниматель, Узбекистан).</p>
+    <p>Taqvim UZ («приложение», «мы») — мобильное приложение для Узбекистана: время намаза по официальному таквиму, время джамаата в мечетях, азан, зикры, Коран и кибла. Эта политика объясняет, какие данные обрабатывает приложение, зачем и как ими распоряжаемся. Разработчик приложения — Турсунов Сирожиддин Турғун ўғли (физическое лицо, Узбекистан).</p>
 
     <h3>Коротко</h3>
-    <div class="note">
-      Мы не показываем рекламу, не продаём данные третьим лицам и не отслеживаем вас между приложениями или сайтами. Большинство настроек (язык, тема, избранные мечети) хранятся только на вашем устройстве и никуда не отправляются.
-    </div>
+    <div class="note">Мы не показываем рекламу, не продаём данные и не отслеживаем вас между приложениями или сайтами. Аккаунт для обычных пользователей не нужен. Настройки (язык, тема, избранные мечети, уведомления, прогресс зикров и Корана) хранятся только на вашем устройстве.</div>
 
-    <h3>Какие данные мы собираем</h3>
+    <h3>Какие данные обрабатываются</h3>
     <table>
       <tr><th>Данные</th><th>Зачем</th><th>Где хранятся</th></tr>
       <tr>
-        <td>Геолокация (только пока приложение открыто)</td>
-        <td>Показать ближайшие мечети и направление на Каабу (Кибла)</td>
-        <td>Только на устройстве. На наши серверы не передаётся и не сохраняется</td>
+        <td>Геолокация (только пока приложение открыто, если вы разрешили)</td>
+        <td>Время намаза для вашего места, ближайшие мечети и расстояние до них, направление на Каабу (кибла)</td>
+        <td>На наши серверы не передаётся и не сохраняется. Для расчёта расстояния до мечетей по дорогам координаты (без каких-либо идентификаторов) отправляются сервису маршрутов OpenStreetMap (routing.openstreetmap.de, FOSSGIS e.V.)</td>
       </tr>
       <tr>
-        <td>Язык, тема оформления, избранные мечети, настройки уведомлений, прогресс чтения зикров</td>
-        <td>Персонализация интерфейса</td>
+        <td>Язык, тема, избранные мечети, настройки уведомлений и азана, прогресс зикров, закладки Корана</td>
+        <td>Работа приложения и персонализация</td>
         <td>Только на устройстве (локальное хранилище)</td>
       </tr>
       <tr>
         <td>Случайный идентификатор устройства (не содержит личных данных)</td>
-        <td>Связать покупку Taqvim+ или пожертвование с вашим устройством, без создания аккаунта</td>
-        <td>На сервере (Supabase), привязан только к случайному id, не к вам лично</td>
+        <td>Связать с устройством подписку Taqvim+ и ранее сделанные покупки, без создания аккаунта</td>
+        <td>На сервере (Supabase) и у RevenueCat, без связи с вашим именем, телефоном или email</td>
       </tr>
       <tr>
-        <td>Push-токен (только если вы добавили мечеть в избранное)</td>
-        <td>Прислать уведомление, если мечеть изменила время намаза</td>
-        <td>На сервере, удаляется при снятии мечети из избранного</td>
+        <td>Хеш идентификатора устройства (только Android; сам идентификатор не передаётся) и дата начала подарка Taqvim+</td>
+        <td>Чтобы бесплатный подарок Taqvim+ на 14 дней выдавался один раз на устройство</td>
+        <td>На сервере (Supabase), без связи с вашим именем, телефоном или email. На iPhone отметка хранится только на устройстве (Keychain)</td>
       </tr>
       <tr>
-        <td>Email и пароль (только для администраторов мечетей — имамов/охранников)</td>
-        <td>Вход в закрытый раздел редактирования времени своей мечети</td>
-        <td>Supabase Authentication, с шифрованием</td>
+        <td>Данные подписки Taqvim+ (тариф, статус, срок, страна магазина)</td>
+        <td>Проверить, активна ли подписка</td>
+        <td>Apple App Store / Google Play и RevenueCat. Данные карты и оплаты мы не видим и не храним</td>
       </tr>
       <tr>
-        <td>Данные платежа (сумма, статус транзакции)</td>
-        <td>Обработка пожертвования (Садақа) или покупки Taqvim+</td>
-        <td>На сервере; номер карты и данные оплаты мы НЕ видим и не храним — их обрабатывает платёжная система Click</td>
+        <td>Push-токен (только если включены уведомления об изменении времени избранной мечети)</td>
+        <td>Сообщить, что мечеть изменила время намаза</td>
+        <td>На сервере (Supabase), удаляется при снятии мечети из избранного</td>
       </tr>
       <tr>
-        <td>Название и район предложенной мечети (по желанию)</td>
-        <td>Обработка заявок «Добавить мечеть»</td>
-        <td>На сервере, без привязки к личности</td>
+        <td>Логин и пароль (только для ответственных за мечеть)</td>
+        <td>Вход в раздел редактирования времени своей мечети</td>
+        <td>Supabase Authentication, пароль хранится в зашифрованном виде</td>
+      </tr>
+      <tr>
+        <td>Название, район и комментарий к предложенной мечети (по желанию)</td>
+        <td>Рассмотреть заявку «Добавить мечеть»</td>
+        <td>На сервере, без привязки к вашей личности</td>
       </tr>
     </table>
+    <p>Уведомления о намазе, азан и напоминания планируются на самом устройстве — для них данные никуда не отправляются.</p>
 
-    <h3>Платежи</h3>
-    <p>Пожертвования и покупка Taqvim+ обрабатываются платёжной системой Click (Uzbekistan). При оплате вы переходите на защищённую страницу Click — номер карты, срок действия и CVV вводятся там и никогда не передаются в приложение или на наши серверы. Мы получаем только факт и сумму успешного платежа.</p>
+    <h3>Подписка Taqvim+</h3>
+    <p>Подписка оформляется и оплачивается только через Apple App Store (на iPhone) или Google Play (на Android) по правилам этих магазинов. Оплату обрабатывает магазин: номер карты и платёжные данные приложению и нам не передаются. Проверку статуса подписки выполняет сервис RevenueCat — он получает случайный идентификатор и данные о покупке от магазина. Отменить подписку можно в настройках подписок App Store или Google Play в любое время.</p>
 
-    <h3>Карта</h3>
-    <p>Карта в приложении показывает тайлы OpenStreetMap (через CartoDB) и, в режиме спутника, снимки Esri. Загрузка тайлов может передавать провайдеру карты стандартные технические данные запроса (например, IP-адрес) — это обычная практика любого картографического сервиса, мы не добавляем к этим запросам личные данные.</p>
+    <h3>Поддержать проект</h3>
+    <p>В Android-версии на экране «Поддержать проект» показаны реквизиты для добровольного перевода через ваш банк. Приложение платежи не принимает и платёжные данные не обрабатывает.</p>
 
-    <h3>Кому мы передаём данные</h3>
+    <h3>Карта и онлайн-содержимое</h3>
+    <p>Карта показывает тайлы OpenFreeMap (данные OpenStreetMap) и, в режиме спутника, снимки Esri. Переводы и тафсир Корана загружаются с QuranEnc.com и Quran.com, официальное расписание намаза — с islomapi.uz, обновления приложения — через Expo. При таких запросах сервисы получают стандартные технические данные (например, IP-адрес); мы не добавляем к ним личных данных.</p>
+
+    <h3>Кому передаются данные</h3>
     <ul>
-      <li><strong>Supabase</strong> — наша база данных и сервер (хостинг ЕС/США, в зависимости от региона проекта).</li>
-      <li><strong>Click</strong> — платёжная система Узбекистана, только при добровольной оплате.</li>
-      <li><strong>Expo Push Service</strong> — доставка push-уведомлений об избранной мечети.</li>
-      <li><strong>islomapi.uz</strong> — источник официального расписания намаза по Ташкенту (публичные данные, без передачи личной информации).</li>
+      <li><b>Supabase</b> — наша база данных и сервер.</li>
+      <li><b>Apple</b> и <b>Google</b> — оформление и оплата подписки Taqvim+.</li>
+      <li><b>RevenueCat</b> — проверка статуса подписки.</li>
+      <li><b>Expo</b> — доставка push-уведомлений и обновлений приложения.</li>
+      <li><b>OpenStreetMap (FOSSGIS e.V.)</b> — расчёт расстояния до мечетей по дорогам.</li>
+      <li><b>islomapi.uz, QuranEnc.com, Quran.com, OpenFreeMap, Esri</b> — публичные данные (таквим, Коран, карта), без передачи личной информации.</li>
     </ul>
-    <p>Мы не продаём и не передаём ваши данные рекламным сетям.</p>
+    <p>Мы не продаём и не передаём данные рекламным сетям.</p>
 
     <h3>Хранение и удаление данных</h3>
-    <p>Большая часть данных вообще не покидает ваше устройство — удаление приложения полностью их стирает. Серверные данные (случайный id устройства, push-подписки, история платежей) можно запросить на удаление, написав нам — см. «Контакты» ниже.</p>
+    <p>Большая часть данных не покидает ваше устройство — удаление приложения стирает их полностью. Данные на сервере (случайный идентификатор, push-подписки, история покупок) можно удалить по запросу — напишите нам (см. «Контакты»). Подписку отменяйте в настройках App Store или Google Play.</p>
 
     <h3>Дети</h3>
-    <p>Приложение не предназначено для детей младше 13 лет и не собирает данные, зная о том, что пользователь — ребёнок.</p>
+    <p>Приложение не предназначено для детей младше 13 лет и сознательно не собирает данные детей.</p>
 
     <h3>Изменения политики</h3>
-    <p>Если политика изменится, дата в начале страницы будет обновлена. Существенные изменения будут дополнительно отражены в описании обновления приложения в сторах.</p>
+    <p>Если политика изменится, дата в начале страницы будет обновлена. О существенных изменениях сообщим в описании обновления приложения.</p>
 
     <h3>Контакты</h3>
     <p>По вопросам конфиденциальности: <a class="contact" href="https://t.me/TaqviimUz">t.me/TaqviimUz</a></p>
   </section>
-
-  <hr class="divider">
 
   <!-- ======================================================== -->
   <!-- ЎЗБЕК ВЕРСИЯСИ -->
   <!-- ======================================================== -->
   <section id="uz" lang="uz">
     <h2>Maxfiylik siyosati</h2>
-    <p class="updated">Oxirgi yangilanish: 2026-yil 16-iyul</p>
+    <p class="updated">Oxirgi yangilanish: 2026-yil 31-oktabr</p>
 
-    <p>Taqvim UZ («ilova», «biz») — O'zbekiston uchun masjidlardagi jamoat namozi vaqtini ko'rsatuvchi mobil ilova. Ushbu siyosat qanday ma'lumotlarni to'plashimizni, nima uchun va qanday ishlatishimizni tushuntiradi. Ilova ishlab chiqaruvchisi — YATT «Tursunov Sirojiddin Turg'un o'g'li» (yakka tartibdagi tadbirkor, O'zbekiston).</p>
+    <p>Taqvim UZ («ilova», «biz») — O'zbekiston uchun mobil ilova: rasmiy taqvim bo'yicha namoz vaqtlari, masjidlardagi jamoat namozi vaqti, azon, zikrlar, Qur'on va qibla. Ushbu siyosat ilova qanday ma'lumotlarni qayta ishlashini, nima uchun va qanday foydalanishimizni tushuntiradi. Ilova ishlab chiquvchisi — Tursunov Sirojiddin Turg'un o'g'li (jismoniy shaxs, O'zbekiston).</p>
 
     <h3>Qisqacha</h3>
-    <div class="note">
-      Biz reklama ko'rsatmaymiz, ma'lumotlaringizni uchinchi tomonlarga sotmaymiz va sizni boshqa ilovalar yoki saytlar bo'ylab kuzatmaymiz. Sozlamalarning aksariyati (til, mavzu, sevimli masjidlar) faqat qurilmangizda saqlanadi va hech qayerga yuborilmaydi.</p>
-    </div>
+    <div class="note">Biz reklama ko'rsatmaymiz, ma'lumotlarni sotmaymiz va sizni ilovalar yoki saytlar orasida kuzatmaymiz. Oddiy foydalanuvchilar uchun akkaunt kerak emas. Sozlamalar (til, mavzu, sevimli masjidlar, bildirishnomalar, zikr va Qur'on o'qish holati) faqat qurilmangizda saqlanadi.</div>
 
-    <h3>Qanday ma'lumotlarni to'playmiz</h3>
+    <h3>Qanday ma'lumotlar qayta ishlanadi</h3>
     <table>
       <tr><th>Ma'lumot</th><th>Nima uchun</th><th>Qayerda saqlanadi</th></tr>
       <tr>
-        <td>Geolokatsiya (faqat ilova ochiq bo'lganda)</td>
-        <td>Yaqin atrofdagi masjidlarni va Qibla yo'nalishini ko'rsatish</td>
-        <td>Faqat qurilmada. Serverlarimizga yuborilmaydi va saqlanmaydi</td>
+        <td>Geolokatsiya (faqat ilova ochiq bo'lganda va siz ruxsat bergan bo'lsangiz)</td>
+        <td>Joyingiz uchun namoz vaqtlari, yaqin masjidlar va ulargacha masofa, Ka'ba yo'nalishi (qibla)</td>
+        <td>Serverlarimizga yuborilmaydi va saqlanmaydi. Masjidlargacha yo'l bo'yicha masofani hisoblash uchun koordinatalar (hech qanday identifikatorsiz) OpenStreetMap marshrut xizmatiga (routing.openstreetmap.de, FOSSGIS e.V.) yuboriladi</td>
       </tr>
       <tr>
-        <td>Til, mavzu, sevimli masjidlar, bildirishnoma sozlamalari, zikr o'qish jarayoni</td>
-        <td>Interfeysni shaxsiylashtirish</td>
+        <td>Til, mavzu, sevimli masjidlar, bildirishnoma va azon sozlamalari, zikr holati, Qur'on xatchoplari</td>
+        <td>Ilova ishlashi va shaxsiylashtirish</td>
         <td>Faqat qurilmada (lokal xotira)</td>
       </tr>
       <tr>
-        <td>Tasodifiy qurilma identifikatori (shaxsiy ma'lumot emas)</td>
-        <td>Taqvim+ xaridi yoki sadaqani hisobga olmasdan qurilmangizga bog'lash</td>
-        <td>Serverda (Supabase), faqat tasodifiy id bilan bog'liq, shaxsingiz bilan emas</td>
+        <td>Qurilmaning tasodifiy identifikatori (shaxsiy ma'lumot emas)</td>
+        <td>Taqvim+ obunasi va avvalgi xaridlarni qurilmaga bog'lash, akkauntsiz</td>
+        <td>Serverda (Supabase) va RevenueCat'da, ismingiz, telefon yoki emailingizga bog'lanmagan</td>
       </tr>
       <tr>
-        <td>Push-token (faqat masjidni sevimlilarga qo'shgan bo'lsangiz)</td>
-        <td>Masjid namoz vaqtini o'zgartirsa, bildirishnoma yuborish</td>
-        <td>Serverda, masjidni sevimlilardan olib tashlaganda o'chiriladi</td>
+        <td>Qurilma identifikatorining xeshi (faqat Android; identifikatorning o'zi yuborilmaydi) va Taqvim+ sovg'asi boshlangan sana</td>
+        <td>14 kunlik bepul Taqvim+ sovg'asi har bir qurilmaga bir marta berilishi uchun</td>
+        <td>Serverda (Supabase), ismingiz, telefon yoki emailingizga bog'lanmagan. iPhone'da belgi faqat qurilmada saqlanadi (Keychain)</td>
       </tr>
       <tr>
-        <td>Email va parol (faqat masjid administratorlari — imom/qorovullar uchun)</td>
-        <td>O'z masjidining namoz vaqtini tahrirlash bo'limiga kirish</td>
-        <td>Supabase Authentication, shifrlangan holda</td>
+        <td>Taqvim+ obunasi ma'lumotlari (tarif, holat, muddat, do'kon mamlakati)</td>
+        <td>Obuna faolligini tekshirish</td>
+        <td>Apple App Store / Google Play va RevenueCat. Karta va to'lov ma'lumotlarini biz ko'rmaymiz va saqlamaymiz</td>
       </tr>
       <tr>
-        <td>To'lov ma'lumotlari (summa, tranzaksiya holati)</td>
-        <td>Sadaqa yoki Taqvim+ xaridini qayta ishlash</td>
-        <td>Serverda; karta raqami va to'lov ma'lumotlarini BIZ ko'rmaymiz va saqlamaymiz — ularni Click to'lov tizimi qayta ishlaydi</td>
+        <td>Push-token (faqat sevimli masjid vaqti o'zgarishi haqidagi bildirishnomalar yoqilgan bo'lsa)</td>
+        <td>Masjid namoz vaqtini o'zgartirgani haqida xabar berish</td>
+        <td>Serverda (Supabase), masjid sevimlilardan olib tashlanganda o'chiriladi</td>
       </tr>
       <tr>
-        <td>Taklif qilingan masjid nomi va tumani (ixtiyoriy)</td>
-        <td>«Masjid qo'shish» arizalarini qayta ishlash</td>
-        <td>Serverda, shaxsga bog'lanmagan holda</td>
+        <td>Login va parol (faqat masjid mas'ullari uchun)</td>
+        <td>O'z masjidi vaqtini tahrirlash bo'limiga kirish</td>
+        <td>Supabase Authentication, parol shifrlangan holda saqlanadi</td>
+      </tr>
+      <tr>
+        <td>Taklif qilingan masjid nomi, tumani va izoh (ixtiyoriy)</td>
+        <td>«Masjid qo'shish» arizasini ko'rib chiqish</td>
+        <td>Serverda, shaxsingizga bog'lanmagan</td>
       </tr>
     </table>
+    <p>Namoz bildirishnomalari, azon va eslatmalar qurilmaning o'zida rejalashtiriladi — buning uchun ma'lumot hech qayerga yuborilmaydi.</p>
 
-    <h3>To'lovlar</h3>
-    <p>Sadaqa va Taqvim+ xaridi Click (O'zbekiston) to'lov tizimi orqali amalga oshiriladi. To'lov paytida Clickning himoyalangan sahifasiga o'tasiz — karta raqami, amal qilish muddati va CVV o'sha yerda kiritiladi va hech qachon ilovaga yoki serverlarimizga uzatilmaydi. Biz faqat muvaffaqiyatli to'lov faktini va summasini olamiz.</p>
+    <h3>Taqvim+ obunasi</h3>
+    <p>Obuna faqat Apple App Store (iPhone'da) yoki Google Play (Android'da) orqali, shu do'konlar qoidalariga ko'ra rasmiylashtiriladi va to'lanadi. To'lovni do'kon amalga oshiradi: karta raqami va to'lov ma'lumotlari ilovaga ham, bizga ham uzatilmaydi. Obuna holatini RevenueCat xizmati tekshiradi — u tasodifiy identifikator va do'kondan xarid ma'lumotlarini oladi. Obunani istalgan vaqtda App Store yoki Google Play obunalar sozlamalarida bekor qilish mumkin.</p>
 
-    <h3>Xarita</h3>
-    <p>Ilovadagi xarita OpenStreetMap (CartoDB orqali) va sputnik rejimida Esri tasvirlarini ko'rsatadi. Xarita bo'laklarini yuklash xarita provayderiga so'rovning standart texnik ma'lumotlarini (masalan, IP-manzil) uzatishi mumkin — bu har qanday xarita xizmatining odatiy amaliyoti, biz bu so'rovlarga shaxsiy ma'lumot qo'shmaymiz.</p>
+    <h3>Loyihani qo'llab-quvvatlash</h3>
+    <p>Android versiyasida «Loyihani qo'llab-quvvatlash» ekranida bankingiz orqali ixtiyoriy o'tkazma uchun rekvizitlar ko'rsatilgan. Ilova to'lov qabul qilmaydi va to'lov ma'lumotlarini qayta ishlamaydi.</p>
 
-    <h3>Ma'lumotlarni kimlarga uzatamiz</h3>
+    <h3>Xarita va onlayn kontent</h3>
+    <p>Xarita OpenFreeMap (OpenStreetMap ma'lumotlari) va sun'iy yo'ldosh rejimida Esri tasvirlarini ko'rsatadi. Qur'on tarjimalari va tafsiri QuranEnc.com va Quran.com'dan, rasmiy namoz jadvali islomapi.uz'dan, ilova yangilanishlari Expo orqali yuklanadi. Bunday so'rovlarda xizmatlar standart texnik ma'lumotlarni (masalan, IP-manzil) oladi; biz ularga shaxsiy ma'lumot qo'shmaymiz.</p>
+
+    <h3>Ma'lumotlar kimga uzatiladi</h3>
     <ul>
-      <li><strong>Supabase</strong> — ma'lumotlar bazamiz va serverimiz.</li>
-      <li><strong>Click</strong> — O'zbekiston to'lov tizimi, faqat ixtiyoriy to'lov paytida.</li>
-      <li><strong>Expo Push Service</strong> — sevimli masjid haqida push-bildirishnomalarni yetkazish.</li>
-      <li><strong>islomapi.uz</strong> — Toshkent bo'yicha rasmiy namoz taqvimi manbai (ommaviy ma'lumotlar, shaxsiy ma'lumot uzatilmaydi).</li>
+      <li><b>Supabase</b> — ma'lumotlar bazamiz va serverimiz.</li>
+      <li><b>Apple</b> va <b>Google</b> — Taqvim+ obunasini rasmiylashtirish va to'lash.</li>
+      <li><b>RevenueCat</b> — obuna holatini tekshirish.</li>
+      <li><b>Expo</b> — push-bildirishnomalar va ilova yangilanishlarini yetkazish.</li>
+      <li><b>OpenStreetMap (FOSSGIS e.V.)</b> — masjidlargacha yo'l bo'yicha masofani hisoblash.</li>
+      <li><b>islomapi.uz, QuranEnc.com, Quran.com, OpenFreeMap, Esri</b> — ochiq ma'lumotlar (taqvim, Qur'on, xarita), shaxsiy ma'lumot uzatilmaydi.</li>
     </ul>
-    <p>Ma'lumotlaringizni reklama tarmoqlariga sotmaymiz va uzatmaymiz.</p>
+    <p>Biz ma'lumotlarni sotmaymiz va reklama tarmoqlariga bermaymiz.</p>
 
-    <h3>Ma'lumotlarni saqlash va o'chirish</h3>
-    <p>Ma'lumotlarning katta qismi umuman qurilmangizdan chiqmaydi — ilovani o'chirish ularni butunlay tozalaydi. Serverdagi ma'lumotlarni (tasodifiy qurilma id, push-obunalar, to'lovlar tarixi) o'chirishni so'rashingiz mumkin — pastdagi «Aloqa» bo'limiga qarang.</p>
+    <h3>Saqlash va o'chirish</h3>
+    <p>Ma'lumotlarning katta qismi qurilmangizdan chiqmaydi — ilovani o'chirish ularni butunlay o'chiradi. Serverdagi ma'lumotlarni (tasodifiy identifikator, push-obunalar, xaridlar tarixi) so'rov bo'yicha o'chirish mumkin — bizga yozing («Aloqa» bo'limiga qarang). Obunani App Store yoki Google Play sozlamalarida bekor qiling.</p>
 
     <h3>Bolalar</h3>
-    <p>Ilova 13 yoshdan kichik bolalar uchun mo'ljallanmagan va foydalanuvchi bola ekanligini bilgan holda ma'lumot to'plamaydi.</p>
+    <p>Ilova 13 yoshgacha bo'lgan bolalar uchun mo'ljallanmagan va bolalar ma'lumotlarini ataylab to'plamaydi.</p>
 
-    <h3>Siyosat o'zgarishlari</h3>
-    <p>Siyosat o'zgarsa, sahifa boshidagi sana yangilanadi. Muhim o'zgarishlar ilova yangilanishi tavsifida qo'shimcha ravishda aks ettiriladi.</p>
+    <h3>Siyosat o'zgarishi</h3>
+    <p>Siyosat o'zgarsa, sahifa boshidagi sana yangilanadi. Muhim o'zgarishlar haqida ilova yangilanishi tavsifida xabar beramiz.</p>
 
     <h3>Aloqa</h3>
     <p>Maxfiylik bo'yicha savollar uchun: <a class="contact" href="https://t.me/TaqviimUz">t.me/TaqviimUz</a></p>
   </section>
 
   <footer>
-    Taqvim UZ · YATT «Tursunov Sirojiddin Turg'un o'g'li» · <a class="contact" href="https://t.me/TaqviimUz">t.me/TaqviimUz</a>
+    Taqvim UZ · Tursunov Sirojiddin Turg'un o'g'li · <a class="contact" href="https://t.me/TaqviimUz">t.me/TaqviimUz</a>
   </footer>
 
 </div>
